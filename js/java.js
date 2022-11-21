@@ -1,6 +1,13 @@
-const requestURL = "https://jsonplaceholder.typicode.com/users";
+const buttonClick = document.querySelector('button');
+const circle = document.querySelector('.circle');
 
-const xhr = new XMLHttpRequest();
+buttonClick.addEventListener('click', click);
 
-xhr.open("GET" , requestURL);
-xhr.send();
+function click () {
+	const clickSound = document.getElementById('beep');
+	clickSound.play();
+	circle.classList.toggle("animation");
+	buttonClick.classList.toggle("button_color")
+}
+
+
